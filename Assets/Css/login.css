@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma;
+}
+
+body{
+    background-color: white;
+    background: linear-gradient(45deg, rgb(0, 0, 0), #026bff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    opacity: 0;
+    animation: fadeInBody 0.8s ease-out forwards;
+}
+
+@keyframes fadeInBody{
+    to{
+        opacity: 1;
+    }
+}
+
+.login-box{
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+    animation: slideInScale 1s ease-out 0.3s forwards;
+}
+
+@keyframes slideInScale{
+    to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.login-box p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.login-box span{
+    font-size: 12px;
+}
+
+.login-box a{
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.login-box button{
+    background-color: #003ef6;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.login-box button:hover{
+   background-color: rgb(38, 0, 255);
+   transform: translateY(-2px);
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+}
+
+.login-box button.Shlok{
+    background-color: transparent;
+    border-color: #5c352c;
+}
+
+.login-box form{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.login-box form h1{
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+.login-box form .social-list{
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1s forwards;
+}
+
+.login-box form span{
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1.2s forwards;
+}
+
+.login-box form input{
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1.4s forwards;
+}
+
+.login-box form input:nth-of-type(2){
+    animation-delay: 1.5s;
+}
+
+.login-box form input:nth-of-type(3){
+    animation-delay: 1.6s;
+}
+
+.login-box form a{
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1.7s forwards;
+}
+
+.login-box form button{
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1.8s forwards;
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-box input{
+    background-color: whitesmoke;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-wrap{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.login{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.login-box.active .login{
+    transform: translateX(100%);
+}
+
+.register{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.login-box.active .register{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-list{
+    margin: 20px 0;
+}
+
+.social-list a{
+    border: 1px solid #1F1C18;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.side-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+
+.login-box.active .side-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.side-panel{
+    background-color: #1F1C18;
+    height: 100%;
+    background: linear-gradient(to right, rgb(0, 0, 0), #026bff);
+    color: white;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.login-box.active .side-panel{
+    transform: translateX(50%);
+}
+
+.panel-content{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.panel-content h1{
+    opacity: 0;
+    animation: slideInFromSide 1s ease-out 1s forwards;
+}
+
+.panel-content p{
+    opacity: 0;
+    animation: slideInFromSide 1s ease-out 1.2s forwards;
+}
+
+.panel-content button{
+    opacity: 0;
+    animation: slideInFromSide 1s ease-out 1.4s forwards;
+}
+
+@keyframes slideInFromSide{
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.left-content{
+    transform: translateX(-200%);
+}
+
+.login-box.active .left-content{
+    transform: translateX(0);
+}
+
+.right-content{
+    right: 0;
+    transform: translateX(0);
+}
+
+.login-box.active .right-content{
+    transform: translateX(200%);
+}
+
