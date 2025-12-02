@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Assets/Css/calculator.css" />
+  </head>
+  <body>
+    <div class="calculator_container">
+      <input type="text" id="display" disabled />
+      <div class="button">
+        <button onclick="ClearDisplay()">CE</button>
+        <button onclick="numvalue('1')">1</button>
+        <button onclick="numvalue('2')">2</button>
+        <button onclick="numvalue('*')">X</button>
+
+        <button onclick="numvalue('3')">3</button>
+        <button onclick="numvalue('4')">4</button>
+        <button onclick="numvalue('5')">5</button>
+
+        <button onclick="numvalue('/')">÷</button>
+        <button onclick="numvalue('6')">6</button>
+        <button onclick="numvalue('7')">7</button>
+
+        <button onclick="numvalue('8')">8</button>
+        <button onclick="numvalue('-')">-</button>
+        <button onclick="numvalue('9')">9</button>
+
+        <button onclick="numvalue('0')">0</button>
+        <button onclick="numvalue('.')">.</button>
+        <button onclick="numvalue('+')">+</button>
+        <button onclick="backspace()">⌫</button>
+        <button onclick="EqualTo()" class="equal">=</button>
+      </div>
+    </div>
+    <script src="Assets/Js/calculator.js"></script>
+  </body>
+</html>
