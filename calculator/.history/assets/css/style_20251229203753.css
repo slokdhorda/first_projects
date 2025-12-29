@@ -4,9 +4,7 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --text-primary: #ffffff;
   --text-secondary: #94a3b8;
-  --accent-color: #6366f1;
-  --accent-hover: #4f46e5;
-  --danger-color: #ef4444;
+
   --function-bg: rgba(255, 255, 255, 0.1);
   --button-hover: rgba(255, 255, 255, 0.15);
 }

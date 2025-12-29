@@ -48,32 +48,7 @@ body {
   animation: float 20s infinite ease-in-out;
 }
 
-.blob-1 {
-  background: #6366f1;
-  width: 400px;
-  height: 400px;
-  top: -100px;
-  left: -100px;
-  animation-delay: 0s;
-}
 
-.blob-2 {
-  background: #ec4899;
-  width: 300px;
-  height: 300px;
-  bottom: -50px;
-  right: -50px;
-  animation-delay: -5s;
-}
-
-.blob-3 {
-  background: #06b6d4;
-  width: 350px;
-  height: 350px;
-  bottom: 20%;
-  left: 20%;
-  animation-delay: -10s;
-}
 
 @keyframes float {
 
